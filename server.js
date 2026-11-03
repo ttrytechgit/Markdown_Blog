@@ -1,10 +1,11 @@
 const express = require('express')
-// const mongoose = require('mongoose')
+const mongoose = require('mongoose')
 // const Article = require('./models/article')
 const articleRouter = require('./routes/articles')
 const app = express()
 
-// mongoose.connect('mongodb://localhost/blog', 
+mongoose.connect('mongodb://localhost/markdown_blog')
+// , 
 // {
 //     useNewUrlParser: true, useUnifiedTopology: true
 // }
@@ -12,9 +13,8 @@ const app = express()
 
 app.set('view engine', 'ejs')
 
-app.use('/articles', articleRouter)
+// app.use('/articles', articleRouter)
 
-// app.use(express.urlencoded({ extended: false }))
 
 // app.get('/', (req, res) => {
 //     res.send('Hello World')
@@ -42,6 +42,8 @@ app.get('/', (req, res) => {
 //     })
 //     res.render('articles/index', { articles: articles })
 // })
+
+app.use(express.urlencoded({ extended: false }))
 
 // app.use('/articles', articleRouter)
 
