@@ -6,12 +6,16 @@ const router = express.Router()
 //     res.send('In articles')
 // })
 
+// router.get('/new', (req, res) => {
+//     res.render('articles/new')
+// })
+
 router.get('/new', (req, res) => {
-    res.render('articles/new')
+    res.render('articles/new', { article: new Article() })
 })
 
-// router.get('/new', (req, res) => {
-//     res.render('articles/new', { article: new Article() })
+// router.get('/:id', (req,res) => {
+//     res.send(req.params.id)
 // })
 
 router.get('/:id', async (req, res) => {
