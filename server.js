@@ -4,9 +4,11 @@ const Article = require('./models/article')
 const articleRouter = require('./routes/articles')
 const app = express()
 
-mongoose.connect('mongodb://localhost/blog', {
-    useNewUrlParser: true, useUnifiedTopology: true
-})
+mongoose.connect('mongodb://localhost/blog', 
+// {
+//     useNewUrlParser: true, useUnifiedTopology: true
+// }
+)
 
 app.set('view engine', 'ejs')
 
@@ -14,7 +16,7 @@ app.use(express.urlencoded({ extended: false }))
 
 app.get('/', async (req, res) => {
     const articles = await (await Article.find()).toSorted({
-        createOn: 'desc'
+        createOn: 'description'
     })
     res.render('articles/index', { articles: articles })
 })
