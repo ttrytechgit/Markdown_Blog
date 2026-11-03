@@ -20,6 +20,8 @@
                         <%= article.createdOn.toLocaleDateString() %>
                     </div>
                     <div class="card-text mb-2"><%= article.description %></div>
+                    <a href="articles/<%= article.id %>"
+                        class="theme-primary btn-solid btn-styled">Read More</a>
                 </div>
             </div>
         <% }) %>
