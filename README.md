@@ -3,21 +3,6 @@
 > A concise one- or two-sentence description of what your project does and why it exists. Markdown Blog created using Node, Express, and MongoDB.
 
 
-I. (ran the following commands)
-    1. npm init -y
-    2. npm i express mongoose ejs
-    3. npm i --save-dev nodemon
-II. (in scripts added "devStart": "nodemon server.js")
-III. created server.js)
-I.
-    4. npm run devStart
-IV. open browser localhost:5000 and app.listen let's us see cannot get /
-V. app.get - res.send'hello world' displays on browser!!
-VI. app.set view engine and ejs will convert our views to html
-VII. create folder views and file index.js
-VIII.change res.send to .render()
-IX. CTRL + C to quit running nodemon
-
 
 ---
 
